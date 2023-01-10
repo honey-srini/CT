@@ -1,0 +1,35 @@
+test> show dbs
+
+test> db
+
+test>  use srini
+switched to db srini
+
+
+srini> db.createCollection("emp")
+
+
+srini> db.emp.find()
+
+
+srini> db.emp.insertOne({"emp_no":1,"name":"srini","age":22})
+
+
+srini> db.emp.find()
+
+
+srini> db.emp.insertMany([{"emp_no":2,"name":"honey","age":22},{"emp_no":3,"name":"srinivasan","age":23}])
+
+
+srini> db.emp.find().pretty()
+
+
+srini> db.emp1.drop()
+
+srini> db.emp.updateOne({emp_no:1},{$set:{emp_no:20}})
+
+
+srini> db.emp.updateMany({age:{$gt:20}},{$set:{age:23}})
+
+
+db.emp.deleteOne({"emp_no":3})
